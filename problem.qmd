@@ -1,0 +1,68 @@
+# Problem solving mechanisms
+
+Problem solving is the way by which solutions are developed to remove an obstacle from achieving an ultimate goal. Problems in need of solutions range from basic personal issues of "how do I turn on this appliance?' to more complex topics in the business and academic fields. Complex challenges in the course of project implementation can be solved by using a shared, collaborative, and systematic approach to problem solving. There are many problem-solving techniques and methods but following seven step process of problem-solving approach is preferred taking into consideration the nature of the project. The process is one of continuous improvement. The goal is not to solve but to evolve, adjusting the solution continually as new challenges emerge, through repeating these steps.
+
+```{mermaid}
+%%| fig-width: 9
+flowchart LR
+  A[Sensing Problem] --> B(Defining the Problem)
+  B --> C{Determine the root cause}
+  C --> D(Alternative solution)
+  D --> E{Select a solution}
+  E --> Fe(Implement the solution)
+  Fe --> ye{Evaluation of the outcome}
+```
+
+## Sensing the problem
+
+Problem sensing is the process by which the project team first become concerned that the activities of the project may be taking an unexpected and undesirable direction that potentially requires action. The core of the problem sensing is the accumulation of discrepancies between what is being observed (implemented) and what is desired (planned). These discrepancies accumulate until they pass some threshold and are classiﬁed as a problem or not a problem.
+
+## Defining the problem
+
+Once the problem is identified, the next step is to define the problem in terms of its context, background, and symptoms. It is important to identify the problem through problem formulation and questioning such as: who it affects,
+
+-   how urgent/important it is to resolve,
+
+-   Is this a problem in itself or a symptom of a deeper, underlying problem?
+
+-   What have we already tried to address this problem?
+
+One may have to deal with several problems in the course of project implementation such as: - Delay of the project activities - Poor quality of the report
+
+## Determine the root cause
+
+The project team begins to explore what has caused the problem. At this stage, assumptions are uncovered and underlying problems are further revealed. The project team may return to step two to revise the definition of the problem
+
+## Develop alternative solutions
+
+Often the most obvious answer is not the most effective solution to the problem. Therefore, it is important to generate as many solutions to the problem as possible, no matter how outlandish they may seem. This is where the creative side of problem solving really comes in. Brainstorming with a group can be an excellent tool for identifying potential alternatives.
+
+## Select a solution
+
+Once a number of potential solutions have been generated, you need to evaluate each of them to see how effective they might be in addressing the problem and select the 'best fit' to the problem. Consider the following when selecting the 'best fit':
+
+-   It can be implemented within an acceptable time frame
+
+-   It is cost effective and realistic
+
+-   It can adopt to conditions as they evolve and change
+
+-   Its risks are manageable
+
+-   It is acceptable to the client and by the people who will implement the solution
+
+ou lose control over the situation. In some cases, a problem can escalate if it is not dealt with promptly. For example, if you do not handle customer complaints promptly, the customer is likely to become even more annoyed. You will have to work much harder to get a satisfactory solution.
+
+## Implement the solution
+
+Once the solution has been chosen, an action plan to implement and execute the solution process should be prepared. The plan should also include actions required before and after the implementation of the solution.
+
+## Evaluate the outcome
+
+This final stage requires an evaluation of the outcomes and results of the solution process. Ask quastions such as:
+
+-   Did the option answer the questions we were working on?
+
+-    Are the milestones met
+
+-   Was the necessary work completed in line with the plan and schedule.

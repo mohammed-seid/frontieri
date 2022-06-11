@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.542">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Project Implementation and Management Guideline - 4&nbsp; Problem solving mechanisms</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./feature.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Problem solving mechanisms</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Project Implementation and Management Guideline</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./phase.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Phases of Project Implementation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./feature.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Features of a Successful Project Management</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./problem.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Problem solving mechanisms</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sensing-the-problem" id="toc-sensing-the-problem" class="nav-link active" data-scroll-target="#sensing-the-problem"> <span class="header-section-number">4.1</span> Sensing the problem</a></li>
+  <li><a href="#defining-the-problem" id="toc-defining-the-problem" class="nav-link" data-scroll-target="#defining-the-problem"> <span class="header-section-number">4.2</span> Defining the problem</a></li>
+  <li><a href="#determine-the-root-cause" id="toc-determine-the-root-cause" class="nav-link" data-scroll-target="#determine-the-root-cause"> <span class="header-section-number">4.3</span> Determine the root cause</a></li>
+  <li><a href="#develop-alternative-solutions" id="toc-develop-alternative-solutions" class="nav-link" data-scroll-target="#develop-alternative-solutions"> <span class="header-section-number">4.4</span> Develop alternative solutions</a></li>
+  <li><a href="#select-a-solution" id="toc-select-a-solution" class="nav-link" data-scroll-target="#select-a-solution"> <span class="header-section-number">4.5</span> Select a solution</a></li>
+  <li><a href="#implement-the-solution" id="toc-implement-the-solution" class="nav-link" data-scroll-target="#implement-the-solution"> <span class="header-section-number">4.6</span> Implement the solution</a></li>
+  <li><a href="#evaluate-the-outcome" id="toc-evaluate-the-outcome" class="nav-link" data-scroll-target="#evaluate-the-outcome"> <span class="header-section-number">4.7</span> Evaluate the outcome</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Problem solving mechanisms</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Problem solving is the way by which solutions are developed to remove an obstacle from achieving an ultimate goal. Problems in need of solutions range from basic personal issues of “how do I turn on this appliance?’ to more complex topics in the business and academic fields. Complex challenges in the course of project implementation can be solved by using a shared, collaborative, and systematic approach to problem solving. There are many problem-solving techniques and methods but following seven step process of problem-solving approach is preferred taking into consideration the nature of the project. The process is one of continuous improvement. The goal is not to solve but to evolve, adjusting the solution continually as new challenges emerge, through repeating these steps.</p>
+<div class="cell" data-fig-width="9">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
+  A[Sensing Problem] --&gt; B(Defining the Problem)
+  B --&gt; C{Determine the root cause}
+  C --&gt; D(Alternative solution)
+  D --&gt; E{Select a solution}
+  E --&gt; Fe(Implement the solution)
+  Fe --&gt; ye{Evaluation of the outcome}
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<section id="sensing-the-problem" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sensing-the-problem"><span class="header-section-number">4.1</span> Sensing the problem</h2>
+<p>Problem sensing is the process by which the project team first become concerned that the activities of the project may be taking an unexpected and undesirable direction that potentially requires action. The core of the problem sensing is the accumulation of discrepancies between what is being observed (implemented) and what is desired (planned). These discrepancies accumulate until they pass some threshold and are classiﬁed as a problem or not a problem.</p>
+</section>
+<section id="defining-the-problem" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="defining-the-problem"><span class="header-section-number">4.2</span> Defining the problem</h2>
+<p>Once the problem is identified, the next step is to define the problem in terms of its context, background, and symptoms. It is important to identify the problem through problem formulation and questioning such as: who it affects,</p>
+<ul>
+<li><p>how urgent/important it is to resolve,</p></li>
+<li><p>Is this a problem in itself or a symptom of a deeper, underlying problem?</p></li>
+<li><p>What have we already tried to address this problem?</p></li>
+</ul>
+<p>One may have to deal with several problems in the course of project implementation such as: - Delay of the project activities - Poor quality of the report</p>
+</section>
+<section id="determine-the-root-cause" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="determine-the-root-cause"><span class="header-section-number">4.3</span> Determine the root cause</h2>
+<p>The project team begins to explore what has caused the problem. At this stage, assumptions are uncovered and underlying problems are further revealed. The project team may return to step two to revise the definition of the problem</p>
+</section>
+<section id="develop-alternative-solutions" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="develop-alternative-solutions"><span class="header-section-number">4.4</span> Develop alternative solutions</h2>
+<p>Often the most obvious answer is not the most effective solution to the problem. Therefore, it is important to generate as many solutions to the problem as possible, no matter how outlandish they may seem. This is where the creative side of problem solving really comes in. Brainstorming with a group can be an excellent tool for identifying potential alternatives.</p>
+</section>
+<section id="select-a-solution" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="select-a-solution"><span class="header-section-number">4.5</span> Select a solution</h2>
+<p>Once a number of potential solutions have been generated, you need to evaluate each of them to see how effective they might be in addressing the problem and select the ‘best fit’ to the problem. Consider the following when selecting the ‘best fit’:</p>
+<ul>
+<li><p>It can be implemented within an acceptable time frame</p></li>
+<li><p>It is cost effective and realistic</p></li>
+<li><p>It can adopt to conditions as they evolve and change</p></li>
+<li><p>Its risks are manageable</p></li>
+<li><p>It is acceptable to the client and by the people who will implement the solution</p></li>
+</ul>
+<p>ou lose control over the situation. In some cases, a problem can escalate if it is not dealt with promptly. For example, if you do not handle customer complaints promptly, the customer is likely to become even more annoyed. You will have to work much harder to get a satisfactory solution.</p>
+</section>
+<section id="implement-the-solution" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="implement-the-solution"><span class="header-section-number">4.6</span> Implement the solution</h2>
+<p>Once the solution has been chosen, an action plan to implement and execute the solution process should be prepared. The plan should also include actions required before and after the implementation of the solution.</p>
+</section>
+<section id="evaluate-the-outcome" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="evaluate-the-outcome"><span class="header-section-number">4.7</span> Evaluate the outcome</h2>
+<p>This final stage requires an evaluation of the outcomes and results of the solution process. Ask quastions such as:</p>
+<ul>
+<li><p>Did the option answer the questions we were working on?</p></li>
+<li><p>Are the milestones met</p></li>
+<li><p>Was the necessary work completed in line with the plan and schedule.</p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./feature.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Features of a Successful Project Management</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
